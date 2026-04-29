@@ -103,27 +103,28 @@ public class ScoreboardClassificatoria {
                 "Time 14|Fatec F|0|0"
         };
         String resposta =
-                "Classificados para a Final" + "\n"
-                        + "Time 02 - Fatec A (3,110)" + "\n"
-                        + "Time 03 - Fatec B (3,100)" + "\n"
-                        + "Time 05 - Fatec B (4,210)" + "\n"
-                        + "Time 07 - Fatec C (3,151)" + "\n"
-                        + "Time 09 - Fatec E (2,130)" + "\n"
-                        + "Time 10 - Fatec E (3,140)" + "\n"
-                        + "Time 11 - Fatec E (2,330)" + "\n"
-                        + "Time 13 - Fatec F (1,200)" + "\n"
-                        + "\n"
-                        + "Lista de Espera" + "\n"
-                        + "Time 01 - Fatec A (3,150)" + "\n"
-                        + "Time 06 - Fatec C (2,90)" + "\n"
-                        + "Time 04 - Fatec B (2,280)" + "\n"
-                        + "Time 12 - Fatec E (1,180)" + "\n"
-                        + "\n"
-                        + "Desclassificados" + "\n"
-                        + "Time 08 - Fatec D (0,0)" + "\n"
-                        + "Time 14 - Fatec F (0,0)" + "\n"
-                        + "\n"
-                        + "Apuracao concluida!";
+                """
+                        Classificados para a Final
+                        Time 02 - Fatec A (3,110)
+                        Time 03 - Fatec B (3,100)
+                        Time 05 - Fatec B (4,210)
+                        Time 07 - Fatec C (3,151)
+                        Time 09 - Fatec E (2,130)
+                        Time 10 - Fatec E (3,140)
+                        Time 11 - Fatec E (2,330)
+                        Time 13 - Fatec F (1,200)
+                        
+                        Lista de Espera
+                        Time 01 - Fatec A (3,150)
+                        Time 06 - Fatec C (2,90)
+                        Time 04 - Fatec B (2,280)
+                        Time 12 - Fatec E (1,180)
+                        
+                        Desclassificados
+                        Time 08 - Fatec D (0,0)
+                        Time 14 - Fatec F (0,0)
+                        
+                        Apuracao concluida!""";
         String saida = test(entrada);
         if (saida.equals(resposta)) {
             System.out.println("Sucesso no Teste 1");
@@ -193,7 +194,7 @@ public class ScoreboardClassificatoria {
 
         classificados.sort(Comparator.comparing(p -> p.nome));
 
-        StringBuffer saida = new StringBuffer();
+        StringBuilder saida = new StringBuilder();
 
         System.out.println("Classificados para a Final");
         saida.append("Classificados para a Final\n");
@@ -227,10 +228,10 @@ public class ScoreboardClassificatoria {
 }
 
 class Grupo {
-    String nome;
-    String fatec;
-    int acertos;
-    int tempo;
+    final String nome;
+    final String fatec;
+    final int acertos;
+    final int tempo;
 
     Grupo(String[] input) {
         nome = input[0];
@@ -241,12 +242,9 @@ class Grupo {
 
     @Override
     public String toString() {
-        StringBuffer stb = new StringBuffer();
-        stb
-                .append(nome).append(" - ")
-                .append(fatec).append(" (")
-                .append(acertos).append(",")
-                .append(tempo).append(")");
-        return stb.toString();
+        return nome + " - " +
+                fatec + " (" +
+                acertos + "," +
+                tempo + ")";
     }
 }
