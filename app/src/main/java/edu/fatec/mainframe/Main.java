@@ -63,5 +63,6 @@ public class Main {
                         | 9 - Sair                      |
                         |-------------------------------|"""
         );
+        System.out.print("Option: ");
     }
 }
