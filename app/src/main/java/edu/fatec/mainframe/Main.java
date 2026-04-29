@@ -24,12 +24,13 @@ public class Main {
                 }
                 break;
                 case 2: {
-
+                    ScoreboardClassificatoria scb = new ScoreboardClassificatoria();
+                    scb.test();
                 }
                 break;
                 case 3: {
-                    DecisãoDoAgricultor decisãoDoAgricultor = new DecisãoDoAgricultor();
-                    decisãoDoAgricultor.test();
+                    DecisaoDoAgricultor dda = new DecisaoDoAgricultor();
+                    dda.test();
                 }
                 break;
                 case 4: {

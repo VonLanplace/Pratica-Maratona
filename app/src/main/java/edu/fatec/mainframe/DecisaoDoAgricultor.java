@@ -2,7 +2,7 @@ package edu.fatec.mainframe;
 
 import java.util.Scanner;
 
-public class DecisãoDoAgricultor {
+public class DecisaoDoAgricultor {
     public void run(Scanner scn) {
         if (scn == null) {
             throw new IllegalStateException("O Scanner precisa ser inicializado antes de usar!");
