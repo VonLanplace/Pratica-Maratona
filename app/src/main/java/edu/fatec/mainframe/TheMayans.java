@@ -3,14 +3,9 @@ package edu.fatec.mainframe;
 import java.util.Scanner;
 
 public class TheMayans {
-    Scanner scn;
 
-    TheMayans(Scanner scn) {
-        this.scn = scn;
-    }
-
-    public void run() {
-        if (this.scn == null) {
+    public void run(Scanner scn) {
+        if (scn == null) {
             throw new IllegalStateException("O Scanner precisa ser inicializado antes de usar!");
         }
 
@@ -45,10 +40,6 @@ public class TheMayans {
     }
 
     public void test() {
-        if (this.scn == null) {
-            throw new IllegalStateException("O Scanner precisa ser inicializado antes de usar!");
-        }
-
         if (this.test(". --..") == 32) {
             System.out.println("Passou no Teste 1");
         }
