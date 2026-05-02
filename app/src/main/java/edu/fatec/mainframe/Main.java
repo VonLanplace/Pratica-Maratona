@@ -1,5 +1,10 @@
 package edu.fatec.mainframe;
 
+import edu.fatec.mainframe.questoes1.AHeliconEAlem;
+import edu.fatec.mainframe.questoes1.DecisaoDoAgricultor;
+import edu.fatec.mainframe.questoes1.ScoreboardClassificatoria;
+import edu.fatec.mainframe.questoes1.TheMayans;
+
 import java.util.Scanner;
 
 public class Main {
@@ -53,15 +58,15 @@ public class Main {
     public static void printMainMenu() {
         System.out.println(
                 """
-                        |-------------------------------|
-                        |             MENU              |
-                        |-------------------------------|
-                        | 1 - The Mayans                |
-                        | 2 - Scoreboard Classificatória|
-                        | 3 - Decisão do Agricultor     |
-                        | 4 - À Helicon e além          |
-                        | 9 - Sair                      |
-                        |-------------------------------|"""
+                        |--------------------------------|
+                        |             MENU               |
+                        |--------------------------------|
+                        | 1 - The Mayans                 |
+                        | 2 - Scoreboard Classificatória |
+                        | 3 - Decisão do Agricultor      |
+                        | 4 - À Helicon e além           |
+                        | 9 - Sair                       |
+                        |--------------------------------|"""
         );
         System.out.print("Option: ");
     }
