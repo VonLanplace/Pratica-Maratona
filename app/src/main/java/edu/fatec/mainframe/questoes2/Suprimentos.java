@@ -1,4 +1,4 @@
-package edu.fatec.mainframe.extras1;
+package edu.fatec.mainframe.questoes2;
 
 import java.util.Scanner;
 

@@ -1,11 +1,11 @@
-package edu.fatec.mainframe;
+package edu.fatec.mainframe.questoes2;
 
 import java.util.Scanner;
 
 public class BaseInimiga {
 
 
-    public void run(Scanner scn){
+    public void run(Scanner scn) {
 
         int Ds;
         int Ys;
